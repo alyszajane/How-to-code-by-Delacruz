@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial - Learn HTML Basics</title>
+    <style>
+        body {
+            font-family: Monaco;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #2c3e50, #34495e); 
+            color: #ecf0f1; 
+        }
+
+        header {
+            background-image: url('backg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            margin: 0;
+            overflow-x: auto; 
+            white-space: nowrap; 
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: inline-flex; 
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); 
+        }
+
+        main {
+            padding: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: white; 
+            font-size: 40px; 
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s; 
+        }
+
+        h1:hover {
+            transform: scale(1.1); 
+        }
+        h2 {
+            color: #ecf0f1;
+            margin-top: 0;
+        }
+
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            max-width: 100%;
+            margin: 0 auto;
+            color: #007BFF; 
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e; 
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        textarea {
+            width: 93%;
+            height: 100px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            color: #333; 
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3; 
+            transform: translateY(-2px);
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Learn HTML </h1>
+        <nav>
+            <ul>
+<li><a href="#images">Adding Images</a></li>
+<li><a href="#audio">Adding Audio</a></li>
+<li><a href="#lists">HTML Lists</a></li>
+<li><a href="#links">HTML Links</a></li>
+<li><a href="#iframes">HTML Iframes</a></li>
+<li><a href="#semantic">Semantic HTML</a></li>
+<li><a href="#try">Try It Yourself</a></li>
+    </ul>
+    </nav>
+    </header>             
+               
+
+    <main>
+    <section id="images">
+    <h2>Adding Images</h2>
+    <p>To add an image to your webpage, use the <code>&lt;img&gt;</code> tag. The <code>src</code> attribute specifies the path to the image, and the <code>alt</code> attribute provides alternative text for the image.</p>
+    <h3>Example of Adding an Image</h3>
+    <pre>
+    <code>
+&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;
+    </code>
+    </pre>
+    </section>
+
+    <section id="audio">
+    <h2>Adding Audio</h2>
+<p>To add audio to your webpage, use the <code>&lt;audio&gt;</code> tag. You can specify controls to allow users to play, pause, and adjust the volume.</p>
+     <h3>Example of Adding Audio</h3>
+     <pre>
+     <code>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+    </code>
+    </pre>
+    </section>
+
+    <section id="lists">
+    <h2>HTML Lists</h2>
+<p>HTML supports ordered and unordered lists. Use the <code>&lt;ul&gt;</code> tag for unordered lists and the <code>&lt;ol&gt;</code> tag for ordered lists.</p>
+     <h3>Example of Unordered List</h3>
+     <pre>
+     <code>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+    </code>
+    </pre>
+    <h3>Example of Ordered List</h3>
+    <pre>
+    <code>
+&lt;ol&gt;
+  &lt;li&gt;First Item&lt;/li&gt;
+  &lt;li&gt;Second Item&lt;/li&gt;
+  &lt;li&gt;Third Item&lt;/li&gt;
+&lt;/ol&gt;
+    </code>
+    </pre>
+    </section>
+
+    <section id="iframes">
+    <h2>HTML Iframes</h2>
+<p>Iframes allow you to embed another HTML page within your current page. Use the <code>&lt;iframe&gt;</code> tag for this purpose.</p>
+     <h3>Example of an Iframe</h3>
+     <pre>
+     <code>
+&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
+     </code>
+     </pre>
+     </section>
+
+     <section id="semantic">
+     <h2>Semantic HTML</h2>
+<p>Semantic HTML uses HTML markup to reinforce the meaning of the content. Elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> are examples of semantic elements.</p>
+      <h3>Example of Semantic HTML</h3>
+      <pre>
+      <code>
+&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+&lt;article&gt;
+  &lt;h2&gt;Article Title&lt;/h2&gt;
+  &lt;p&gt;This is an article about something interesting.&lt;/p&gt;
+&lt;/article&gt;
+&lt;footer&gt;
+  &lt;p &gt;© 2023 My Website&lt;/p&gt;
+&lt;/footer&gt;
+       </code>
+       </pre>
+       </section>
+
+       <section id="try">
+       <h2>Try It Yourself</h2>
+       <div>
+<label for="htmlCode">Write your HTML code below:</label>
+<textarea id="htmlCode" placeholder="&lt;h1&gt;Hello World!&lt;/h1&gt;"></textarea>
+<button onclick="runCode()">Run Code</button>
+<h3>Output:</h3>
+<iframe id="outputFrame"></iframe>
+    </div>
+    </section>
+    </main>
+
+    <center><a href="index.html">Back to Main Page</a></center>
+
+    <footer>
+        <p>&copy; w3.schools.com</p>
+    </footer>
+
+    <script>
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const outputFrame = document.getElementById('outputFrame');
+            const output = outputFrame.contentDocument || outputFrame.contentWindow.document;
+            output.open();
+            output.write(htmlCode);
+            output.close();
+        }
+    </script>
+</body>
+</html>
